@@ -36,12 +36,12 @@ async def check_claim(req: ClaimRequest):
 
     playwright = await async_playwright().start()
     browser = await playwright.chromium.launch(
-    headless=True,
-    args=[
-        "--no-sandbox",
-        "--disable-setuid-sandbox"
-    ]
-)
+        headless=True,
+        args=[
+            "--no-sandbox",
+            "--disable-setuid-sandbox"
+        ]
+    )
 
     try:
         page = await browser.new_page()
