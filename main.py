@@ -34,14 +34,14 @@ class ClaimRequest(BaseModel):
 @app.post("/check-claim")
 async def check_claim(req: ClaimRequest):
 
-    playwright = await async_playwright().start()
-    browser = await playwright.chromium.launch(
-    headless=True,
-    args=[
-        "--no-sandbox",
-        "--disable-setuid-sandbox"
-    ]
-)
+    pw = await async_playwright().start()
+    browser = await pw.chromium.launch(
+        headless=True,
+        args=[
+            "--no-sandbox",
+            "--disable-setuid-sandbox"
+        ]
+    )
 
     try:
         page = await browser.new_page()
@@ -82,4 +82,4 @@ async def check_claim(req: ClaimRequest):
 
     finally:
         await browser.close()
-        await playwright.stop()
+        await pw.stop()
