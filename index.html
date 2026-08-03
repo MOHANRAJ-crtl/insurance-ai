@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Insurance AI</title>
+
+<script
+src="https://unpkg.com/@elevenlabs/convai-widget-embed"
+async
+type="text/javascript">
+</script>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+}
+
+body{
+
+background:#f7f8fa;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+height:100vh;
+
+padding:20px;
+
+}
+
+.container{
+
+width:100%;
+max-width:600px;
+
+background:white;
+
+border:1px solid #e5e7eb;
+
+border-radius:24px;
+
+padding:50px;
+
+text-align:center;
+
+box-shadow:0 10px 40px rgba(0,0,0,.05);
+
+}
+
+.logo{
+
+width:70px;
+height:70px;
+
+border-radius:20px;
+
+background:#2563eb;
+
+color:white;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:30px;
+
+margin:auto;
+
+margin-bottom:25px;
+
+}
+
+h1{
+
+font-size:38px;
+
+color:#111827;
+
+margin-bottom:10px;
+
+}
+
+.tagline{
+
+color:#6b7280;
+
+font-size:18px;
+
+line-height:1.6;
+
+margin-bottom:40px;
+
+}
+
+.info{
+
+background:#f9fafb;
+
+border:1px solid #e5e7eb;
+
+padding:18px;
+
+border-radius:14px;
+
+margin-bottom:35px;
+
+color:#4b5563;
+
+font-size:15px;
+
+line-height:1.6;
+
+}
+
+.footer{
+
+margin-top:40px;
+
+font-size:13px;
+
+color:#9ca3af;
+
+}
+
+@media(max-width:600px){
+
+.container{
+
+padding:35px 25px;
+
+}
+
+h1{
+
+font-size:30px;
+
+}
+
+.tagline{
+
+font-size:16px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="logo">
+🛡️
+</div>
+
+<h1>Insurance AI</h1>
+
+<p class="tagline">
+Your intelligent insurance assistant.<br>
+Speak naturally and get claim updates instantly.
+</p>
+
+<div class="info">
+🎙️ Click the microphone below and start your conversation.
+The assistant will collect your details, verify your claim, and provide the result.
+</div>
+
+<elevenlabs-convai
+agent-id="agent_1001kyhx6ehrfe1bdsr89n4tdteg">
+</elevenlabs-convai>
+
+<div class="footer">
+Powered by ElevenLabs • FastAPI • Playwright
+</div>
+
+</div>
+
+</body>
+</html>
